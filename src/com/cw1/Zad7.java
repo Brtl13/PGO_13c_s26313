@@ -6,10 +6,10 @@ public class Zad7 {
     public static void main(String[] args) {
         Scanner s1 = new Scanner(System.in);
         int n = 0;
-        System.out.print("Podaj wielkość rysunku (wartość nie może być mniejsza niż 5 i musi być parzysta): ");
+        System.out.print("Podaj wielkość rysunku (wartość nie może być mniejsza niż 5 i musi być nieparzysta): ");
         while(true) {
             n = s1.nextInt();
-            if(n < 6 || n % 2 != 0) {
+            if(n < 6 || n % 2 == 0) {
                 System.out.print("Wprowadzono nieprawidłową wartość, proszę spróbować ponownie: ");
             }
             else break;
