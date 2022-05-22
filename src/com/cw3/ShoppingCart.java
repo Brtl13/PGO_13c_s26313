@@ -4,13 +4,6 @@ import java.util.ArrayList;
 import java.util.UUID;
 
 public class ShoppingCart {
-    private static class CartProduct {
-       public String name;
-        public int quantity;
-        public CartProduct() {
-            quantity = 0;
-        }
-    }
     private int id;
     Shop shop;
     private final ArrayList<Product> products = new ArrayList<>();
