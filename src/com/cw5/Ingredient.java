@@ -17,10 +17,6 @@ public abstract class Ingredient {
         return name;
     }
 
-    public void setBaseReagent(int baseReagent) {
-        this.baseReagent = baseReagent;
-    }
-
     protected int getReagent() {
         return baseReagent;
     }
