@@ -9,6 +9,7 @@ public class Elixir {
     private Liquid catalyst;
     private ArrayList<Ingredient> ingredients;
 
+
     protected void checkCreated() throws RuntimeException {
         if (isCreated) {
             throw new RuntimeException("Elixir: can't change, Elixir already created!");
@@ -23,15 +24,27 @@ public class Elixir {
         return null;
     }
 
+    public void setPower(int power) {
+        this.power = power;
+    }
+
     public Elixir(String name) throws RuntimeException {
         if (name != null && !name.isEmpty()) {
             this.name = name;
             isCreated = false;
-            power = 0;
+            setPower(power);
             catalyst = null;
             ingredients = new ArrayList<>();
         } else {
             throw new RuntimeException("Elixir: no name or zero sized name!");
+        }
+    }
+
+    public void setName(String name) {
+        if (name == null || name.isEmpty()) {
+            throw new RuntimeException("Elixir: Name field cannot be empty");
+        } else {
+            this.name = name;
         }
     }
 

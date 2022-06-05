@@ -17,6 +17,14 @@ public abstract class Ingredient {
         return name;
     }
 
+    public void setName(String name) {
+        if (name == null || name.isEmpty()) {
+            throw new RuntimeException("Name field cannot be empty");
+        } else {
+            this.name = name;
+        }
+    }
+
     protected int getReagent() {
         return baseReagent;
     }
